@@ -13,15 +13,12 @@ import com.hdsx.dubbo.user.api.UserService;
 import com.hdsx.dubbo.user.api.bean.user.ChangePassWordBean;
 import com.hdsx.dubbo.user.api.bean.user.UserBean;
 import com.hdsx.dubbo.user.api.bean.user.UserQueryBean;
-import com.hdsx.dubbo.user.api.constant.UserConstants;
-import com.hdsx.dubbo.user.api.constant.UserErrorCodeEnum;
 import com.hdsx.dubbo.user.impl.dao.UserMapper;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;

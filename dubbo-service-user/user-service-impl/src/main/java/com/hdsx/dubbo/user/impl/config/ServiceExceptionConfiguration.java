@@ -1,7 +1,5 @@
 package com.hdsx.dubbo.user.impl.config;
 
-import com.hdsx.dubbo.common.framework.util.ServiceExceptionUtil;
-import com.hdsx.dubbo.user.api.constant.UserErrorCodeEnum;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.EventListener;
@@ -18,9 +16,7 @@ public class ServiceExceptionConfiguration {
 //        } catch (IOException e) {
 //            throw new RuntimeException(e);
 //        }
-        for (UserErrorCodeEnum item : UserErrorCodeEnum.values()) {
-            ServiceExceptionUtil.put(item.getCode(), item.getMessage());
-        }
+
     }
 
 }
