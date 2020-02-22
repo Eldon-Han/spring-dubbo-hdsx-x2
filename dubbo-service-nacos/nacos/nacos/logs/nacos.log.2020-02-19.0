@@ -1,0 +1,100 @@
+2020-02-19 22:52:38,711 INFO Starting Nacos v1.2.0-beta.0 on lccdeMacBook-Pro.local with PID 13352 (/Users/lcc/Downloads/JAVAEE/cli/spring-dubbo-hdsx-x2/dubbo-service-nacos/nacos/nacos/target/nacos-server.jar started by liangchengcheng in /Users/lcc/Downloads/JAVAEE/cli/spring-dubbo-hdsx-x2/dubbo-service-nacos/nacos/nacos/bin)
+
+2020-02-19 22:52:38,716 INFO The following profiles are active: standalone
+
+2020-02-19 22:52:44,146 INFO Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$41fc872e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2020-02-19 22:52:44,307 INFO Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2020-02-19 22:52:44,311 INFO Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6cb107fd' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2020-02-19 22:52:44,316 INFO Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$66d129e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2020-02-19 22:52:44,324 INFO Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2020-02-19 22:52:45,259 INFO Tomcat initialized with port(s): 8848 (http)
+
+2020-02-19 22:52:45,311 INFO Starting service [Tomcat]
+
+2020-02-19 22:52:45,311 INFO Starting Servlet Engine: Apache Tomcat/9.0.13
+
+2020-02-19 22:52:45,334 INFO The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lcc/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+
+2020-02-19 22:52:45,638 INFO Initializing Spring embedded WebApplicationContext
+
+2020-02-19 22:52:45,638 INFO Root WebApplicationContext: initialization completed in 6790 ms
+
+2020-02-19 22:52:53,380 INFO Reflections took 147 ms to scan 1 urls, producing 6 keys and 24 values 
+
+2020-02-19 22:52:53,523 INFO Reflections took 9 ms to scan 1 urls, producing 2 keys and 12 values 
+
+2020-02-19 22:52:53,539 INFO Reflections took 9 ms to scan 1 urls, producing 3 keys and 15 values 
+
+2020-02-19 22:52:55,455 INFO Use Mysql as the driver
+
+2020-02-19 22:52:57,683 INFO Initializing ExecutorService 'applicationTaskExecutor'
+
+2020-02-19 22:52:58,578 INFO Adding welcome page: class path resource [static/index.html]
+
+2020-02-19 22:53:00,895 INFO Creating filter chain: Ant [pattern='/**'], []
+
+2020-02-19 22:53:01,047 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@591e58fa, org.springframework.security.web.context.SecurityContextPersistenceFilter@32cb636e, org.springframework.security.web.header.HeaderWriterFilter@439a8f59, org.springframework.security.web.csrf.CsrfFilter@25f7391e, org.springframework.security.web.authentication.logout.LogoutFilter@6fff253c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40dd3977, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@62dae245, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3954d008, org.springframework.security.web.session.SessionManagementFilter@31024624, org.springframework.security.web.access.ExceptionTranslationFilter@5ab14cb9]
+
+2020-02-19 22:53:01,559 INFO Exposing 2 endpoint(s) beneath base path '/actuator'
+
+2020-02-19 22:53:01,700 INFO Initializing ExecutorService 'taskScheduler'
+
+2020-02-19 22:53:02,286 INFO Tomcat started on port(s): 8848 (http) with context path '/nacos'
+
+2020-02-19 22:53:02,339 INFO Started Nacos in 25.073 seconds (JVM running for 26.079)
+
+2020-02-19 22:53:02,339 INFO Nacos logs files: /Users/lcc/Downloads/JAVAEE/cli/spring-dubbo-hdsx-x2/dubbo-service-nacos/nacos/nacos/logs/
+
+2020-02-19 22:53:02,340 INFO Nacos conf files: /Users/lcc/Downloads/JAVAEE/cli/spring-dubbo-hdsx-x2/dubbo-service-nacos/nacos/nacos/conf/
+
+2020-02-19 22:53:02,341 INFO Nacos data files: /Users/lcc/Downloads/JAVAEE/cli/spring-dubbo-hdsx-x2/dubbo-service-nacos/nacos/nacos/data/
+
+2020-02-19 22:53:02,341 INFO Nacos started successfully in stand alone mode.
+
+2020-02-19 22:53:05,042 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+2020-02-19 22:53:05,043 INFO Initializing Servlet 'dispatcherServlet'
+
+2020-02-19 22:53:05,089 INFO Completed initialization in 46 ms
+
+2020-02-19 22:53:11,825 INFO listen config id:dubbo-registry-nacos-provider-sample.configuratorsdubbo
+
+2020-02-19 22:53:11,827 INFO listen config id 2:dubbo-registry-nacos-provider-sample.configuratorsdubbo
+
+2020-02-19 22:53:12,020 INFO listen config id:dubbo-registry-nacos-provider-sample.configuratorsdubbo
+
+2020-02-19 22:53:12,021 INFO listen config id 2:dubbo-registry-nacos-provider-sample.configuratorsdubbo
+
+2020-02-19 22:53:41,538 INFO listen config id:dubbo-registry-nacos-provider-sample.configuratorsdubboorg.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:.configuratorsdubbo
+
+2020-02-19 22:53:41,538 INFO listen config id 2:dubbo-registry-nacos-provider-sample.configuratorsdubboorg.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:.configuratorsdubbo
+
+2020-02-19 22:53:41,752 INFO listen config id:dubbo-registry-nacos-provider-sample.configuratorsdubboorg.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:.configuratorsdubbo
+
+2020-02-19 22:53:41,752 INFO listen config id 2:dubbo-registry-nacos-provider-sample.configuratorsdubboorg.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:.configuratorsdubbo
+
+2020-02-19 22:54:11,265 INFO listen config id:dubbo-registry-nacos-provider-sample.configuratorsdubboorg.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:.configuratorsdubbo
+
+2020-02-19 22:54:11,265 INFO listen config id 2:dubbo-registry-nacos-provider-sample.configuratorsdubboorg.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:.configuratorsdubbo
+
+2020-02-19 22:54:40,774 INFO listen config id:dubbo-registry-nacos-provider-sample.configuratorsdubboorg.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:.configuratorsdubbo
+
+2020-02-19 22:54:40,776 INFO listen config id 2:dubbo-registry-nacos-provider-sample.configuratorsdubboorg.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:.configuratorsdubbo
+
+2020-02-19 22:55:10,284 INFO listen config id:dubbo-registry-nacos-provider-sample.configuratorsdubboorg.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:.configuratorsdubbo
+
+2020-02-19 22:55:10,284 INFO listen config id 2:dubbo-registry-nacos-provider-sample.configuratorsdubboorg.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:.configuratorsdubbo
+
+2020-02-19 22:55:39,794 INFO listen config id:dubbo-registry-nacos-provider-sample.configuratorsdubboorg.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:.configuratorsdubbo
+
+2020-02-19 22:55:39,794 INFO listen config id 2:dubbo-registry-nacos-provider-sample.configuratorsdubboorg.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:.configuratorsdubbo
+
+2020-02-19 22:56:09,307 INFO listen config id:dubbo-registry-nacos-provider-sample.configuratorsdubboorg.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:.configuratorsdubbo
+
+2020-02-19 22:56:09,307 INFO listen config id 2:dubbo-registry-nacos-provider-sample.configuratorsdubboorg.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:.configuratorsdubbo
+

@@ -1,0 +1,404 @@
+2020-02-19 22:52:54,199 INFO listen for service meta change
+
+2020-02-19 22:53:02,287 INFO [SERVER-INIT] got port: 8848
+
+2020-02-19 22:53:02,287 INFO [SERVER-INIT] got path: /nacos
+
+2020-02-19 22:53:02,301 INFO receive config info: unknown#192.168.31.22:8848#1582123982301#2
+
+
+2020-02-19 22:53:02,334 ERROR [SERVER-STATUS] Exception while sending server status
+
+java.lang.IllegalArgumentException: server: 192.168.31.22:8848 is not in serverlist
+	at com.alibaba.nacos.naming.cluster.ServerListManager.onReceiveServerStatus(ServerListManager.java:198)
+	at com.alibaba.nacos.naming.cluster.ServerListManager$ServerStatusReporter.run(ServerListManager.java:345)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2020-02-19 22:53:04,337 INFO receive config info: unknown#192.168.31.22:8848#1582123984337#2
+
+
+2020-02-19 22:53:04,338 ERROR [SERVER-STATUS] Exception while sending server status
+
+java.lang.IllegalArgumentException: server: 192.168.31.22:8848 is not in serverlist
+	at com.alibaba.nacos.naming.cluster.ServerListManager.onReceiveServerStatus(ServerListManager.java:198)
+	at com.alibaba.nacos.naming.cluster.ServerListManager$ServerStatusReporter.run(ServerListManager.java:345)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2020-02-19 22:53:06,339 INFO receive config info: unknown#192.168.31.22:8848#1582123986339#2
+
+
+2020-02-19 22:53:06,340 ERROR [SERVER-STATUS] Exception while sending server status
+
+java.lang.IllegalArgumentException: server: 192.168.31.22:8848 is not in serverlist
+	at com.alibaba.nacos.naming.cluster.ServerListManager.onReceiveServerStatus(ServerListManager.java:198)
+	at com.alibaba.nacos.naming.cluster.ServerListManager$ServerStatusReporter.run(ServerListManager.java:345)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2020-02-19 22:53:08,344 INFO receive config info: unknown#192.168.31.22:8848#1582123988344#2
+
+
+2020-02-19 22:53:10,348 INFO [NACOS-DISTRO] healthy server list changed, old: [], new: [{"adWeight":0,"alive":true,"ip":"192.168.31.22","key":"192.168.31.22:8848","lastRefTime":1582123988344,"lastRefTimeStr":"2020-02-19 22:53:08","servePort":8848,"site":"unknown","weight":2}]
+
+2020-02-19 22:53:10,348 INFO [NACOS-DISTRO] disable health check for 60000 ms from now on.
+
+2020-02-19 22:53:10,348 INFO receive config info: unknown#192.168.31.22:8848#1582123990348#2
+
+
+2020-02-19 22:53:12,351 INFO receive config info: unknown#192.168.31.22:8848#1582123992351#2
+
+
+2020-02-19 22:53:13,009 INFO creating empty service public:DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:
+
+2020-02-19 22:53:13,048 INFO [NEW-SERVICE] {"appName":"","checksum":"b6d2202161ff9725e7714bfc84e8093b","clusterMap":{},"enabled":true,"groupName":"DEFAULT_GROUP","ipDeleteTimeout":30000,"lastModifiedMillis":1582123993017,"metadata":{},"name":"DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","namespaceId":"public","owners":[],"protectThreshold":0.0,"resetWeight":false,"selector":{"type":"none"},"token":""}
+
+2020-02-19 22:53:13,081 WARN cluster: DEFAULT not found, ip: {"app":"","clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"","instanceIdGenerator":"","ip":"192.168.31.22","ipDeleteTimeout":30000,"lastBeat":1582123993043,"marked":false,"metadata":{"side":"provider","methods":"sayHello","release":"2.7.5","deprecated":"false","dubbo":"2.0.2","pid":"13378","interface":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","version":"1.0.0","generic":"false","revision":"1.0.0","path":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","protocol":"dubbo","application":"dubbo-registry-nacos-provider-sample","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1582123991300"},"port":20880,"serviceName":"DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","tenant":"","weight":1.0}, will create new cluster with default configuration.
+
+2020-02-19 22:53:13,091 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, value: {"instanceList":[{"app":"","clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.31.22#20880#DEFAULT#DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","instanceIdGenerator":"","ip":"192.168.31.22","ipDeleteTimeout":30000,"lastBeat":1582123993043,"marked":false,"metadata":{"side":"provider","methods":"sayHello","release":"2.7.5","deprecated":"false","dubbo":"2.0.2","pid":"13378","interface":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","version":"1.0.0","generic":"false","revision":"1.0.0","path":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","protocol":"dubbo","application":"dubbo-registry-nacos-provider-sample","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1582123991300"},"port":20880,"serviceName":"DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","tenant":"","weight":1.0}]}
+
+2020-02-19 22:53:13,102 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, value: {"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.31.22#20880#DEFAULT#DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","instanceIdGenerator":"","ip":"192.168.31.22","ipDeleteTimeout":30000,"lastBeat":1582123993001,"marked":false,"metadata":{"side":"provider","methods":"sayHello","release":"2.7.5","deprecated":"false","dubbo":"2.0.2","pid":"13378","interface":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","version":"1.0.0","generic":"false","revision":"1.0.0","path":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","protocol":"dubbo","application":"dubbo-registry-nacos-provider-sample","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1582123991300"},"port":20880,"serviceName":"DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","tenant":"","weight":1.0}]}
+
+2020-02-19 22:53:14,354 INFO receive config info: unknown#192.168.31.22:8848#1582123994354#2
+
+
+2020-02-19 22:53:16,359 INFO receive config info: unknown#192.168.31.22:8848#1582123996359#2
+
+
+2020-02-19 22:53:18,361 INFO receive config info: unknown#192.168.31.22:8848#1582123998361#2
+
+
+2020-02-19 22:53:20,365 INFO receive config info: unknown#192.168.31.22:8848#1582124000365#2
+
+
+2020-02-19 22:53:22,370 INFO receive config info: unknown#192.168.31.22:8848#1582124002370#2
+
+
+2020-02-19 22:53:24,375 INFO receive config info: unknown#192.168.31.22:8848#1582124004375#2
+
+
+2020-02-19 22:53:26,378 INFO receive config info: unknown#192.168.31.22:8848#1582124006377#2
+
+
+2020-02-19 22:53:28,381 INFO receive config info: unknown#192.168.31.22:8848#1582124008381#2
+
+
+2020-02-19 22:53:30,387 INFO receive config info: unknown#192.168.31.22:8848#1582124010387#2
+
+
+2020-02-19 22:53:32,392 INFO receive config info: unknown#192.168.31.22:8848#1582124012392#2
+
+
+2020-02-19 22:53:34,395 INFO receive config info: unknown#192.168.31.22:8848#1582124014395#2
+
+
+2020-02-19 22:53:36,400 INFO receive config info: unknown#192.168.31.22:8848#1582124016400#2
+
+
+2020-02-19 22:53:38,401 INFO receive config info: unknown#192.168.31.22:8848#1582124018401#2
+
+
+2020-02-19 22:53:40,402 INFO receive config info: unknown#192.168.31.22:8848#1582124020402#2
+
+
+2020-02-19 22:53:42,405 INFO receive config info: unknown#192.168.31.22:8848#1582124022405#2
+
+
+2020-02-19 22:53:44,409 INFO receive config info: unknown#192.168.31.22:8848#1582124024409#2
+
+
+2020-02-19 22:53:46,414 INFO receive config info: unknown#192.168.31.22:8848#1582124026414#2
+
+
+2020-02-19 22:53:48,416 INFO receive config info: unknown#192.168.31.22:8848#1582124028416#2
+
+
+2020-02-19 22:53:50,421 INFO receive config info: unknown#192.168.31.22:8848#1582124030421#2
+
+
+2020-02-19 22:53:52,425 INFO receive config info: unknown#192.168.31.22:8848#1582124032425#2
+
+
+2020-02-19 22:53:54,431 INFO receive config info: unknown#192.168.31.22:8848#1582124034431#2
+
+
+2020-02-19 22:53:56,437 INFO receive config info: unknown#192.168.31.22:8848#1582124036437#2
+
+
+2020-02-19 22:53:58,437 INFO receive config info: unknown#192.168.31.22:8848#1582124038437#2
+
+
+2020-02-19 22:54:00,440 INFO receive config info: unknown#192.168.31.22:8848#1582124040440#2
+
+
+2020-02-19 22:54:02,445 INFO receive config info: unknown#192.168.31.22:8848#1582124042445#2
+
+
+2020-02-19 22:54:04,448 INFO receive config info: unknown#192.168.31.22:8848#1582124044448#2
+
+
+2020-02-19 22:54:06,453 INFO receive config info: unknown#192.168.31.22:8848#1582124046453#2
+
+
+2020-02-19 22:54:08,455 INFO receive config info: unknown#192.168.31.22:8848#1582124048455#2
+
+
+2020-02-19 22:54:10,460 INFO [NACOS-DISTRO] distro threshold restored and stable now, enable health check. current ratio: 1.0
+
+2020-02-19 22:54:10,460 INFO receive config info: unknown#192.168.31.22:8848#1582124050460#2
+
+
+2020-02-19 22:54:12,465 INFO receive config info: unknown#192.168.31.22:8848#1582124052465#2
+
+
+2020-02-19 22:54:13,068 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, ip: {"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":false,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.31.22#20880#DEFAULT#DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","instanceIdGenerator":"","ip":"192.168.31.22","ipDeleteTimeout":30000,"lastBeat":1582123993001,"marked":false,"metadata":{"side":"provider","methods":"sayHello","release":"2.7.5","deprecated":"false","dubbo":"2.0.2","pid":"13378","interface":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","version":"1.0.0","generic":"false","revision":"1.0.0","path":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","protocol":"dubbo","application":"dubbo-registry-nacos-provider-sample","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1582123991300"},"port":20880,"serviceName":"DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","tenant":"","weight":1.0}
+
+2020-02-19 22:54:13,305 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, value: {"instanceList":[]}
+
+2020-02-19 22:54:13,401 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, value: {"instanceList":[{"app":"","clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.31.22#20880#DEFAULT#DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","instanceIdGenerator":"","ip":"192.168.31.22","ipDeleteTimeout":30000,"lastBeat":1582124053401,"marked":false,"metadata":{"side":"provider","methods":"sayHello","release":"2.7.5","deprecated":"false","dubbo":"2.0.2","pid":"13378","interface":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","version":"1.0.0","generic":"false","revision":"1.0.0","path":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","protocol":"dubbo","application":"dubbo-registry-nacos-provider-sample","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1582123991300"},"port":20880,"serviceName":"DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","tenant":"","weight":1.0}]}
+
+2020-02-19 22:54:14,476 INFO receive config info: unknown#192.168.31.22:8848#1582124054475#2
+
+
+2020-02-19 22:54:16,480 INFO receive config info: unknown#192.168.31.22:8848#1582124056479#2
+
+
+2020-02-19 22:54:18,482 INFO receive config info: unknown#192.168.31.22:8848#1582124058482#2
+
+
+2020-02-19 22:54:20,488 INFO receive config info: unknown#192.168.31.22:8848#1582124060488#2
+
+
+2020-02-19 22:54:22,490 INFO receive config info: unknown#192.168.31.22:8848#1582124062490#2
+
+
+2020-02-19 22:54:24,493 INFO receive config info: unknown#192.168.31.22:8848#1582124064493#2
+
+
+2020-02-19 22:54:26,498 INFO receive config info: unknown#192.168.31.22:8848#1582124066498#2
+
+
+2020-02-19 22:54:28,502 INFO receive config info: unknown#192.168.31.22:8848#1582124068502#2
+
+
+2020-02-19 22:54:30,505 INFO receive config info: unknown#192.168.31.22:8848#1582124070505#2
+
+
+2020-02-19 22:54:32,510 INFO receive config info: unknown#192.168.31.22:8848#1582124072510#2
+
+
+2020-02-19 22:54:34,299 WARN protect threshold reached, return all ips, service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:
+
+2020-02-19 22:54:34,392 WARN protect threshold reached, return all ips, service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:
+
+2020-02-19 22:54:34,513 INFO receive config info: unknown#192.168.31.22:8848#1582124074513#2
+
+
+2020-02-19 22:54:36,518 INFO receive config info: unknown#192.168.31.22:8848#1582124076518#2
+
+
+2020-02-19 22:54:38,523 INFO receive config info: unknown#192.168.31.22:8848#1582124078523#2
+
+
+2020-02-19 22:54:40,528 INFO receive config info: unknown#192.168.31.22:8848#1582124080528#2
+
+
+2020-02-19 22:54:42,533 INFO receive config info: unknown#192.168.31.22:8848#1582124082533#2
+
+
+2020-02-19 22:54:44,402 WARN protect threshold reached, return all ips, service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:
+
+2020-02-19 22:54:44,537 INFO receive config info: unknown#192.168.31.22:8848#1582124084537#2
+
+
+2020-02-19 22:54:46,540 INFO receive config info: unknown#192.168.31.22:8848#1582124086540#2
+
+
+2020-02-19 22:54:48,304 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, ip: {"app":"","clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":false,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.31.22#20880#DEFAULT#DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","instanceIdGenerator":"","ip":"192.168.31.22","ipDeleteTimeout":30000,"lastBeat":1582124053401,"marked":false,"metadata":{"side":"provider","methods":"sayHello","release":"2.7.5","deprecated":"false","dubbo":"2.0.2","pid":"13378","interface":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","version":"1.0.0","generic":"false","revision":"1.0.0","path":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","protocol":"dubbo","application":"dubbo-registry-nacos-provider-sample","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1582123991300"},"port":20880,"serviceName":"DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","tenant":"","weight":1.0}
+
+2020-02-19 22:54:48,310 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, value: {"instanceList":[]}
+
+2020-02-19 22:54:48,474 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, value: {"instanceList":[{"app":"","clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.31.22#20880#DEFAULT#DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","instanceIdGenerator":"","ip":"192.168.31.22","ipDeleteTimeout":30000,"lastBeat":1582124088474,"marked":false,"metadata":{"side":"provider","methods":"sayHello","release":"2.7.5","deprecated":"false","dubbo":"2.0.2","pid":"13378","interface":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","version":"1.0.0","generic":"false","revision":"1.0.0","path":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","protocol":"dubbo","application":"dubbo-registry-nacos-provider-sample","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1582123991300"},"port":20880,"serviceName":"DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","tenant":"","weight":1.0}]}
+
+2020-02-19 22:54:48,545 INFO receive config info: unknown#192.168.31.22:8848#1582124088545#2
+
+
+2020-02-19 22:54:50,549 INFO receive config info: unknown#192.168.31.22:8848#1582124090549#2
+
+
+2020-02-19 22:54:52,552 INFO receive config info: unknown#192.168.31.22:8848#1582124092552#2
+
+
+2020-02-19 22:54:54,555 INFO receive config info: unknown#192.168.31.22:8848#1582124094555#2
+
+
+2020-02-19 22:54:56,562 INFO receive config info: unknown#192.168.31.22:8848#1582124096560#2
+
+
+2020-02-19 22:54:58,566 INFO receive config info: unknown#192.168.31.22:8848#1582124098566#2
+
+
+2020-02-19 22:55:00,571 INFO receive config info: unknown#192.168.31.22:8848#1582124100571#2
+
+
+2020-02-19 22:55:02,576 INFO receive config info: unknown#192.168.31.22:8848#1582124102576#2
+
+
+2020-02-19 22:55:04,579 INFO receive config info: unknown#192.168.31.22:8848#1582124104579#2
+
+
+2020-02-19 22:55:06,581 INFO receive config info: unknown#192.168.31.22:8848#1582124106581#2
+
+
+2020-02-19 22:55:08,586 INFO receive config info: unknown#192.168.31.22:8848#1582124108586#2
+
+
+2020-02-19 22:55:09,329 WARN protect threshold reached, return all ips, service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:
+
+2020-02-19 22:55:10,589 INFO receive config info: unknown#192.168.31.22:8848#1582124110589#2
+
+
+2020-02-19 22:55:12,594 INFO receive config info: unknown#192.168.31.22:8848#1582124112594#2
+
+
+2020-02-19 22:55:14,434 WARN protect threshold reached, return all ips, service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:
+
+2020-02-19 22:55:14,596 INFO receive config info: unknown#192.168.31.22:8848#1582124114596#2
+
+
+2020-02-19 22:55:16,601 INFO receive config info: unknown#192.168.31.22:8848#1582124116601#2
+
+
+2020-02-19 22:55:18,604 INFO receive config info: unknown#192.168.31.22:8848#1582124118604#2
+
+
+2020-02-19 22:55:20,607 INFO receive config info: unknown#192.168.31.22:8848#1582124120607#2
+
+
+2020-02-19 22:55:22,609 INFO receive config info: unknown#192.168.31.22:8848#1582124122609#2
+
+
+2020-02-19 22:55:23,329 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, ip: {"app":"","clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":false,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.31.22#20880#DEFAULT#DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","instanceIdGenerator":"","ip":"192.168.31.22","ipDeleteTimeout":30000,"lastBeat":1582124088474,"marked":false,"metadata":{"side":"provider","methods":"sayHello","release":"2.7.5","deprecated":"false","dubbo":"2.0.2","pid":"13378","interface":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","version":"1.0.0","generic":"false","revision":"1.0.0","path":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","protocol":"dubbo","application":"dubbo-registry-nacos-provider-sample","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1582123991300"},"port":20880,"serviceName":"DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","tenant":"","weight":1.0}
+
+2020-02-19 22:55:23,333 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, value: {"instanceList":[]}
+
+2020-02-19 22:55:23,577 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, value: {"instanceList":[{"app":"","clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.31.22#20880#DEFAULT#DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","instanceIdGenerator":"","ip":"192.168.31.22","ipDeleteTimeout":30000,"lastBeat":1582124123577,"marked":false,"metadata":{"side":"provider","methods":"sayHello","release":"2.7.5","deprecated":"false","dubbo":"2.0.2","pid":"13378","interface":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","version":"1.0.0","generic":"false","revision":"1.0.0","path":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","protocol":"dubbo","application":"dubbo-registry-nacos-provider-sample","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1582123991300"},"port":20880,"serviceName":"DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","tenant":"","weight":1.0}]}
+
+2020-02-19 22:55:24,614 INFO receive config info: unknown#192.168.31.22:8848#1582124124614#2
+
+
+2020-02-19 22:55:26,615 INFO receive config info: unknown#192.168.31.22:8848#1582124126615#2
+
+
+2020-02-19 22:55:28,621 INFO receive config info: unknown#192.168.31.22:8848#1582124128621#2
+
+
+2020-02-19 22:55:30,624 INFO receive config info: unknown#192.168.31.22:8848#1582124130624#2
+
+
+2020-02-19 22:55:32,625 INFO receive config info: unknown#192.168.31.22:8848#1582124132625#2
+
+
+2020-02-19 22:55:34,627 INFO receive config info: unknown#192.168.31.22:8848#1582124134627#2
+
+
+2020-02-19 22:55:36,628 INFO receive config info: unknown#192.168.31.22:8848#1582124136628#2
+
+
+2020-02-19 22:55:38,633 INFO receive config info: unknown#192.168.31.22:8848#1582124138633#2
+
+
+2020-02-19 22:55:40,638 INFO receive config info: unknown#192.168.31.22:8848#1582124140638#2
+
+
+2020-02-19 22:55:42,642 INFO receive config info: unknown#192.168.31.22:8848#1582124142642#2
+
+
+2020-02-19 22:55:44,345 WARN protect threshold reached, return all ips, service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:
+
+2020-02-19 22:55:44,456 WARN protect threshold reached, return all ips, service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:
+
+2020-02-19 22:55:44,643 INFO receive config info: unknown#192.168.31.22:8848#1582124144643#2
+
+
+2020-02-19 22:55:46,648 INFO receive config info: unknown#192.168.31.22:8848#1582124146648#2
+
+
+2020-02-19 22:55:48,648 INFO receive config info: unknown#192.168.31.22:8848#1582124148648#2
+
+
+2020-02-19 22:55:50,656 INFO receive config info: unknown#192.168.31.22:8848#1582124150656#2
+
+
+2020-02-19 22:55:52,665 INFO receive config info: unknown#192.168.31.22:8848#1582124152665#2
+
+
+2020-02-19 22:55:54,462 WARN protect threshold reached, return all ips, service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:
+
+2020-02-19 22:55:54,674 INFO receive config info: unknown#192.168.31.22:8848#1582124154674#2
+
+
+2020-02-19 22:55:56,682 INFO receive config info: unknown#192.168.31.22:8848#1582124156682#2
+
+
+2020-02-19 22:55:58,360 INFO [AUTO-DELETE-IP] service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, ip: {"app":"","clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":false,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.31.22#20880#DEFAULT#DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","instanceIdGenerator":"","ip":"192.168.31.22","ipDeleteTimeout":30000,"lastBeat":1582124123577,"marked":false,"metadata":{"side":"provider","methods":"sayHello","release":"2.7.5","deprecated":"false","dubbo":"2.0.2","pid":"13378","interface":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","version":"1.0.0","generic":"false","revision":"1.0.0","path":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","protocol":"dubbo","application":"dubbo-registry-nacos-provider-sample","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1582123991300"},"port":20880,"serviceName":"DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","tenant":"","weight":1.0}
+
+2020-02-19 22:55:58,365 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, value: {"instanceList":[]}
+
+2020-02-19 22:55:58,648 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, value: {"instanceList":[{"app":"","clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"192.168.31.22#20880#DEFAULT#DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","instanceIdGenerator":"","ip":"192.168.31.22","ipDeleteTimeout":30000,"lastBeat":1582124158648,"marked":false,"metadata":{"side":"provider","methods":"sayHello","release":"2.7.5","deprecated":"false","dubbo":"2.0.2","pid":"13378","interface":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","version":"1.0.0","generic":"false","revision":"1.0.0","path":"org.apache.dubbo.spring.boot.demo.consumer.DemoService","protocol":"dubbo","application":"dubbo-registry-nacos-provider-sample","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1582123991300"},"port":20880,"serviceName":"DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:","tenant":"","weight":1.0}]}
+
+2020-02-19 22:55:58,686 INFO receive config info: unknown#192.168.31.22:8848#1582124158686#2
+
+
+2020-02-19 22:56:00,690 INFO receive config info: unknown#192.168.31.22:8848#1582124160690#2
+
+
+2020-02-19 22:56:02,697 INFO receive config info: unknown#192.168.31.22:8848#1582124162697#2
+
+
+2020-02-19 22:56:04,698 INFO receive config info: unknown#192.168.31.22:8848#1582124164698#2
+
+
+2020-02-19 22:56:06,706 INFO receive config info: unknown#192.168.31.22:8848#1582124166706#2
+
+
+2020-02-19 22:56:08,717 INFO receive config info: unknown#192.168.31.22:8848#1582124168717#2
+
+
+2020-02-19 23:56:10,014 INFO [NACOS-DISTRO] healthy server list changed, old: [{"adWeight":0,"alive":true,"ip":"192.168.31.22","key":"192.168.31.22:8848","lastRefTime":1582123988344,"lastRefTimeStr":"2020-02-19 22:53:08","servePort":8848,"site":"unknown","weight":2}], new: []
+
+2020-02-19 23:56:10,015 INFO [NACOS-DISTRO] disable health check for 60000 ms from now on.
+
+2020-02-19 23:56:10,015 INFO receive config info: unknown#192.168.31.22:8848#1582127770015#2
+
+
+2020-02-19 23:56:12,023 INFO [NACOS-DISTRO] healthy server list changed, old: [], new: [{"adWeight":0,"alive":true,"ip":"192.168.31.22","key":"192.168.31.22:8848","lastRefTime":1582127770015,"lastRefTimeStr":"2020-02-19 23:56:10","servePort":8848,"site":"unknown","weight":2}]
+
+2020-02-19 23:56:12,023 INFO receive config info: unknown#192.168.31.22:8848#1582127772023#2
+
+
+2020-02-19 23:56:14,031 INFO receive config info: unknown#192.168.31.22:8848#1582127774031#2
+
+
+2020-02-19 23:56:16,039 INFO receive config info: unknown#192.168.31.22:8848#1582127776039#2
+
+
+2020-02-19 23:56:18,048 INFO receive config info: unknown#192.168.31.22:8848#1582127778048#2
+
+
+2020-02-19 23:56:20,050 INFO receive config info: unknown#192.168.31.22:8848#1582127780050#2
+
+

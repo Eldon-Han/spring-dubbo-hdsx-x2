@@ -1,0 +1,46 @@
+2020-02-19 22:53:13,096 INFO DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0: {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.31.22:20880:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-02-19 22:53:13,100 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, ips: 192.168.31.22:20880_true,
+
+2020-02-19 22:53:13,103 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, ips: 192.168.31.22:20880_true,
+
+2020-02-19 22:54:13,067 INFO {POS} {IP-DISABLED} valid: 192.168.31.22:20880@DEFAULT@DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, region: unknown, msg: client timeout after 15000, last beat: 1582123993001
+
+2020-02-19 22:54:13,306 INFO DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0: {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.31.22:20880:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-02-19 22:54:13,306 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, ips: 
+
+2020-02-19 22:54:13,402 INFO DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0: {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.31.22:20880:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-02-19 22:54:13,402 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, ips: 192.168.31.22:20880_true,
+
+2020-02-19 22:54:33,293 INFO {POS} {IP-DISABLED} valid: 192.168.31.22:20880@DEFAULT@DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, region: unknown, msg: client timeout after 15000, last beat: 1582124053401
+
+2020-02-19 22:54:48,310 INFO DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0: {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.31.22:20880:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-02-19 22:54:48,311 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, ips: 
+
+2020-02-19 22:54:48,475 INFO DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0: {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.31.22:20880:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-02-19 22:54:48,475 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, ips: 192.168.31.22:20880_true,
+
+2020-02-19 22:55:08,323 INFO {POS} {IP-DISABLED} valid: 192.168.31.22:20880@DEFAULT@DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, region: unknown, msg: client timeout after 15000, last beat: 1582124088474
+
+2020-02-19 22:55:23,333 INFO DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0: {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.31.22:20880:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-02-19 22:55:23,333 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, ips: 
+
+2020-02-19 22:55:23,578 INFO DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0: {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.31.22:20880:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-02-19 22:55:23,578 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, ips: 192.168.31.22:20880_true,
+
+2020-02-19 22:55:43,342 INFO {POS} {IP-DISABLED} valid: 192.168.31.22:20880@DEFAULT@DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, region: unknown, msg: client timeout after 15000, last beat: 1582124123577
+
+2020-02-19 22:55:58,365 INFO DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0: {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.31.22:20880:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-02-19 22:55:58,365 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, ips: 
+
+2020-02-19 22:55:58,648 INFO DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0: {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.31.22:20880:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-02-19 22:55:58,648 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@providers:org.apache.dubbo.spring.boot.demo.consumer.DemoService:1.0.0:, ips: 192.168.31.22:20880_true,
+
