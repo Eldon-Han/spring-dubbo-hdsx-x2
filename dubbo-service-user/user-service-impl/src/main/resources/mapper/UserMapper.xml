@@ -2,87 +2,85 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hdsx.dubbo.user.impl.dao.UserMapper">
 
-    <sql id="FIELDS">
-      id, mobile, nickname, avatar, status,
-      create_time, deleted
-    </sql>
+    <resultMap id="userMap" type="com.hdsx.dubbo.user.api.bean.user.UserBean">
+        <id column="id" property="id"/>
+    </resultMap>
 
-    <insert id="insert" parameterType="UserDO" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO users (
-          id, mobile, status, create_time, deleted
+    <!-- 我是为了演示， 所以用了快捷的写法，实际不可如此-->
+    <insert id="addUser" parameterType="com.hdsx.dubbo.user.api.bean.user.UserBean">
+        INSERT INTO tb_user (
+          id, username, password, phone, email, created, updated, state
         ) VALUES (
-          #{id}, #{mobile}, #{status}, #{createTime}, #{deleted}
+          #{id}, #{username}, #{password}, #{phone}, #{email}, NOW(), NULL, #{state}
         )
     </insert>
 
-    <update id="update" parameterType="UserDO">
-        UPDATE users
-        <set>
-            <if test="mobile != null">
-                , mobile = #{mobile}
-            </if>
-            <if test="nickname != null">
-                , nickname = #{nickname}
-            </if>
-            <if test="avatar != null">
-                , avatar = #{avatar}
-            </if>
-            <if test="status != null">
-                , status = #{status}
-            </if>
-            <if test="deleted != null">
-                , deleted = #{deleted}
-            </if>
-        </set>
+    <update id="editUser" parameterType="com.hdsx.dubbo.user.api.bean.user.UserBean">
+        UPDATE tb_user
+         username = #{username},
+         password = #{password},
+         phone = #{phone},
+         email = #{email},
+         updated = NOW(),
+         state = #{state}
         WHERE id = #{id}
     </update>
 
-    <select id="selectById" parameterType="Integer" resultType="UserDO">
-        SELECT
-           <include refid="FIELDS" />
-        FROM users
+    <delete id="deleteUserByUserId" parameterType="String">
+        DELETE FROM tb_user WHERE id = #{id}
+    </delete>
+
+    <select id="getUserByName" parameterType="String" resultMap="userMap">
+        SELECT * FROM tb_user WHERE username = #{username}
+    </select>
+
+    <select id="getUserById" parameterType="String" resultMap="userMap">
+        SELECT * FROM tb_user WHERE id = #{id}
+    </select>
+
+    <select id="getUserList" parameterType="com.hdsx.dubbo.user.api.bean.user.UserQueryBean" resultMap="userMap">
+        SELECT * FROM tb_user user WHERE 1 = 1
+        <if test="username != null and  username != ''">
+            AND user.username = #{username}
+        </if>
+        <if test="phone != null and  phone != ''">
+            AND user.phone = #{phone}
+        </if>
+        <if test="email != null and  email != ''">
+            AND user.email = #{email}
+        </if>
+        <if test="state >= 0">
+            AND user.state = #{state}
+        </if>
+        <if test="limit > 0 and  current > -1">
+            LIMIT ${limit} OFFSET ${current};
+        </if>
+        ORDER BY user.username ASC
+    </select>
+
+    <select id="getUserListCount" parameterType="com.hdsx.dubbo.user.api.bean.user.UserQueryBean" resultType="int">
+        SELECT count(*) FROM tb_user user WHERE 1 = 1
+        <if test="username != null and  username != ''">
+            AND user.username = #{username}
+        </if>
+        <if test="phone != null and  phone != ''">
+            AND user.phone = #{phone}
+        </if>
+        <if test="email != null and  email != ''">
+            AND user.email = #{email}
+        </if>
+        <if test="state >= 0">
+            AND user.state = #{state}
+        </if>
+        <if test="limit > 0 and  current > -1">
+            LIMIT ${limit} OFFSET ${current};
+        </if>
+        ORDER BY user.username ASC
+    </select>
+    <update id="changePassWord" parameterType="com.hdsx.dubbo.user.api.bean.user.ChangePassWordBean">
+        UPDATE tb_user
+        password = #{password}
         WHERE id = #{id}
-        AND deleted = 0
-    </select>
-
-    <select id="selectByMobile" parameterType="String" resultType="UserDO">
-      SELECT
-          <include refid="FIELDS" />
-      FROM users
-      WHERE mobile = #{mobile}
-      AND deleted = 0
-    </select>
-
-    <select id="selectListByNicknameLike" resultType="UserDO">
-        SELECT
-            <include refid="FIELDS" />
-        FROM users
-        <where>
-            <if test="nickname != null">
-                nickname LIKE "%"#{nickname}"%"
-            </if>
-            <if test="status != null">
-                status = #{status}
-            </if>
-            AND deleted = 0
-        </where>
-        LIMIT #{offset}, #{limit}
-    </select>
-
-    <select id="selectCountByNicknameLike" resultType="Integer">
-        SELECT
-            COUNT(1)
-        FROM users
-        <where>
-            <if test="nickname != null">
-                nickname LIKE "%"#{nickname}"%"
-            </if>
-            <if test="status != null">
-                status = #{status}
-            </if>
-            AND deleted = 0
-        </where>
-    </select>
-
+    </update>
 
 </mapper>
