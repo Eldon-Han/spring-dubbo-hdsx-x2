@@ -6,6 +6,7 @@ import com.hdsx.dubbo.common.framework.vo.ResultCode;
 import com.hdsx.dubbo.common.framework.vo.ResultUtil;
 import com.hdsx.dubbo.user.api.UserService;
 import com.hdsx.dubbo.user.api.bean.user.UserBean;
+import com.hdsx.dubbo.user.api.bean.user.UserQueryBean;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -64,6 +65,17 @@ public class UserController {
         } catch (Exception e) {
             log.error("系统异常:{}", e.getMessage(), e);
             return ResultUtil.error(ResultCode.LOGIN_FAIL);
+        }
+    }
+
+    @ApiOperation(value = "获取用户信息列表", httpMethod = "POST", produces = "application/json", notes = "获取用户信息列表")
+    @RequestMapping(value = "/getUserList", method = RequestMethod.POST, produces = "application/json")
+    public Result getUserList(@RequestBody UserQueryBean userQueryBean) {
+        try {
+            return userService.getUserList(userQueryBean);
+        } catch (Exception e) {
+            log.error("系统异常:{}", e.getMessage(), e);
+            return ResultUtil.error(ResultCode.QUERY_FAIL);
         }
     }
 
