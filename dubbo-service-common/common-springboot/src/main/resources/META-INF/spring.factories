@@ -1,5 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.hdsx.dubbo.springboot.web.AdminMVCAutoConfiguration, \
-  com.hdsx.dubbo.springboot.web.UserMVCAutoConfiguration, \
-  com.hdsx.dubbo.springboot.swagger.SwaggerAutoConfiguration, \
-  com.hdsx.dubbo.springboot.metrics.MetricsAutoConfiguration

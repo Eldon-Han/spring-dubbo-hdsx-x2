@@ -1,11 +1,5 @@
-package com.hdsx.dubbo.user.impl.service;
+package com.hdsx.dubbo.user.service;
 
-import com.hdsx.dubbo.common.framework.constant.CommonStatusEnum;
-import com.hdsx.dubbo.common.framework.constant.DeletedStatusEnum;
-import com.hdsx.dubbo.common.framework.constant.SysErrorCodeEnum;
-import com.hdsx.dubbo.common.framework.constant.UserTypeEnum;
-import com.hdsx.dubbo.common.framework.util.ServiceExceptionUtil;
-import com.hdsx.dubbo.common.framework.util.ValidationUtil;
 import com.hdsx.dubbo.common.framework.vo.Result;
 import com.hdsx.dubbo.common.framework.vo.ResultCode;
 import com.hdsx.dubbo.common.framework.vo.ResultUtil;
@@ -13,13 +7,13 @@ import com.hdsx.dubbo.user.api.UserService;
 import com.hdsx.dubbo.user.api.bean.user.ChangePassWordBean;
 import com.hdsx.dubbo.user.api.bean.user.UserBean;
 import com.hdsx.dubbo.user.api.bean.user.UserQueryBean;
-import com.hdsx.dubbo.user.impl.dao.UserMapper;
+import com.hdsx.dubbo.user.dao.UserMapper;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.dubbo.config.annotation.Reference;
+import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import java.util.Date;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +22,7 @@ import java.util.Map;
  * UserService ，实现和用户信息相关的逻辑
  */
 @Service
-@org.apache.dubbo.config.annotation.Service(validation = "true", version = "${dubbo.provider.UserService.version}")
+@Component
 public class UserServiceImpl implements UserService {
 
     @Autowired

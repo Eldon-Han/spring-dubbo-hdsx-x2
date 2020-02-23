@@ -1,4 +1,4 @@
-package com.hdsx.dubbo.user.impl.dao;
+package com.hdsx.dubbo.user.dao;
 
 import com.hdsx.dubbo.user.api.bean.user.ChangePassWordBean;
 import com.hdsx.dubbo.user.api.bean.user.UserBean;

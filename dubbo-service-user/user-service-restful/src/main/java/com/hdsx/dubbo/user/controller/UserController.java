@@ -1,4 +1,4 @@
-package com.hdsx.dubbo.user.application.controller.users;
+package com.hdsx.dubbo.user.controller;
 
 import com.hdsx.dubbo.common.framework.vo.CommonResult;
 import com.hdsx.dubbo.common.framework.vo.Result;
@@ -13,14 +13,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.web.bind.annotation.*;
 
-import static com.hdsx.dubbo.common.framework.vo.CommonResult.success;
 @Slf4j
 @RestController
 @RequestMapping("/users/user")
 @Api("用户模块")
 public class UserController {
 
-    @Reference(validation = "true", version = "${dubbo.provider.UserService.version}")
+    @Reference
     private UserService userService;
 
     @ApiOperation(value = "新增用户信息", httpMethod = "POST", produces = "application/json", notes = "新增用户信息")
