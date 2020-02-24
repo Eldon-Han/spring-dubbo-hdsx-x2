@@ -1,4 +1,4 @@
-package com.hdsx.dubbo.order.impl.config;
+package com.hdsx.dubbo.order.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;

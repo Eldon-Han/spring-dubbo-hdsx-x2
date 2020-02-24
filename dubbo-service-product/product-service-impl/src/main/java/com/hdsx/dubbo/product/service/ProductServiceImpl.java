@@ -74,7 +74,7 @@ public class ProductServiceImpl implements ProductService {
                 // 原来数据库的 数量 - 这次订单的数量
                 int num = productById.getNum() - productNumBean.getNum() ;
                 productNumBean.setNum(num);
-                productMapper.UpdateProductNumBean(productNumBean);
+                productMapper.updateProductNumBean(productNumBean);
                 return ResultUtil.success(ResultCode.UPDATE_SUCCESS);
             }
         } catch (Exception e) {

@@ -1,4 +1,4 @@
-package com.hdsx.dubbo.order.impl.dao;
+package com.hdsx.dubbo.order.dao;
 
 import com.hdsx.dubbo.order.api.bean.OrderBean;
 import com.hdsx.dubbo.order.api.bean.OrderQueryBean;
@@ -10,12 +10,13 @@ import java.util.List;
 /**
  * 订单 mapper
  */
-@Repository
 public interface OrderMapper {
     /**
      * 查询订单的列表
      */
     List<OrderBean> getOrderList(OrderQueryBean orderQueryBean);
+
+    int getOrderListNum(OrderQueryBean orderQueryBean);
 
     OrderBean getOrderById(String id);
 

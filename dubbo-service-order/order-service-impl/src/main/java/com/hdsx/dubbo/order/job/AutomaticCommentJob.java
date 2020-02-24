@@ -1,4 +1,4 @@
-package com.hdsx.dubbo.order.impl.job;
+package com.hdsx.dubbo.order.job;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

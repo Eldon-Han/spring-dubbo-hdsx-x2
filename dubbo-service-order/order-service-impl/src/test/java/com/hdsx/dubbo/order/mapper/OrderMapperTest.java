@@ -1,7 +1,7 @@
-package com.hdsx.dubbo.order.impl.mapper;
+package com.hdsx.dubbo.order.mapper;
 
-import com.hdsx.dubbo.order.impl.OrderApplicationTest;
-import com.hdsx.dubbo.order.impl.dao.OrderMapper;
+import com.hdsx.dubbo.order.dao.OrderMapper;
+import com.hdsx.dubbo.order.OrderApplicationTest;
 import com.hdsx.dubbo.order.impl.dataobject.OrderDO;
 import org.junit.Test;
 import org.junit.runner.RunWith;

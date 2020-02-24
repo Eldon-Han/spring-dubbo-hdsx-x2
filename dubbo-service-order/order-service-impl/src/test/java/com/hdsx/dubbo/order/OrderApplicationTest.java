@@ -1,4 +1,4 @@
-package com.hdsx.dubbo.order.impl;
+package com.hdsx.dubbo.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

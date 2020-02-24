@@ -1,8 +1,8 @@
-package com.hdsx.dubbo.order.impl.service;
+package com.hdsx.dubbo.order.service;
 
-import com.hdsx.dubbo.order.impl.OrderApplicationTest;
+import com.hdsx.dubbo.order.dao.OrderMapper;
+import com.hdsx.dubbo.order.OrderApplicationTest;
 import com.hdsx.dubbo.order.api.OrderService;
-import com.hdsx.dubbo.order.impl.dao.OrderMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

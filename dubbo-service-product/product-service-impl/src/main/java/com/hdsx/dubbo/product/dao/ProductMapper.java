@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Collection;
 import java.util.List;
 
-@Repository
 public interface ProductMapper {
 
     /**
@@ -19,7 +18,7 @@ public interface ProductMapper {
     /**
      * 修改商品信息
      */
-    int UpdateProductNumBean(ProductNumBean productNumBean);
+    int updateProductNumBean(ProductNumBean productNumBean);
 
     /**
      * 修改商品信息

@@ -1,141 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hdsx.dubbo.order.impl.dao.OrderMapper">
+<mapper namespace="com.hdsx.dubbo.order.dao.OrderMapper">
 
-    <sql id="FIELDS">
-        id, user_id, order_no, buy_price, discount_price, logistics_price, present_price, pay_amount,
-        payment_time, delivery_time, receiver_time, closing_time,
-        has_return_exchange,
-        status, remark, create_time, update_time, `deleted`
-    </sql>
+    <resultMap id="orderBeanMap" type="com.hdsx.dubbo.order.api.bean.OrderBean">
+        <id column="id" property="id"/>
+    </resultMap>
 
-    <sql id="updateFieldSql" >
-        <set>
-            <if test="orderNo != null">
-                , order_no = #{orderNo}
-            </if>
-            <if test="buyPrice != null">
-                , buy_price = #{buyPrice}
-            </if>
-            <if test="discountPrice != null">
-                , discount_price = #{discountPrice}
-            </if>
-            <if test="logisticsPrice != null">
-                , logistics_price = #{logisticsPrice}
-            </if>
-            <if test="logisticsPrice != null">
-                , logistics_price = #{logisticsPrice}
-            </if>
-            <if test="presentPrice != null">
-                , present_price = #{presentPrice}
-            </if>
-            <if test="payAmount != null">
-                , pay_amount = #{payAmount}
-            </if>
-            <if test="deliveryTime != null">
-                , delivery_time = #{deliveryTime}
-            </if>
-            <if test="paymentTime != null">
-                , payment_time = #{paymentTime}
-            </if>
-            <if test="receiverTime != null">
-                , receiver_time = #{receiverTime}
-            </if>
-            <if test="closingTime != null">
-                , closing_time = #{closingTime}
-            </if>
-            <if test="hasReturnExchange != null">
-                , has_return_exchange = #{hasReturnExchange}
-            </if>
+    <select id="getOrderList" parameterType="com.hdsx.dubbo.order.api.bean.OrderQueryBean" resultMap="orderBeanMap">
+        SELECT * FROM tb_order orders WHERE 1 = 1
+        <if test="orderstate >= 0">
+            AND orders.orderstate = #{orderstate}
+        </if>
+        <if test="userid != null and  userid != ''">
+            AND orders.userid = #{userid}
+        </if>
+        ORDER BY orders.createtime DESC
+        <if test="limit > 0 and  current > -1">
+            LIMIT ${limit} OFFSET ${current};
+        </if>
+    </select>
 
-            <if test="status != null">
-                , status = #{status}
-            </if>
-            <if test="remark != null">
-                , remark = #{remark}
-            </if>
-            <if test="deleted != null">
-                , `deleted` = #{deleted}
-            </if>
-            <if test="createTime != null">
-                , create_time = #{createTime}
-            </if>
-            <if test="updateTime != null">
-                , update_time = #{updateTime}
-            </if>
-        </set>
-    </sql>
+    <select id="getOrderListCount" parameterType="com.hdsx.dubbo.order.api.bean.OrderQueryBean" resultType="int">
+        SELECT count(*) FROM tb_order orders WHERE 1 = 1
+        <if test="orderstate >= 0">
+            AND orders.orderstate = #{orderstate}
+        </if>
+        <if test="userid != null and  userid != ''">
+            AND orders.userid = #{userid}
+        </if>
+    </select>
 
-    <update id="updateById" parameterType="OrderDO">
-        UPDATE `orders`
-        <include refid="updateFieldSql" />
+    <select id="getOrderById" parameterType="String" resultMap="orderBeanMap">
+        SELECT * FROM tb_order WHERE id = #{id}
+    </select>
+
+    <!-- 我是为了演示， 所以用了快捷的写法，实际不可如此-->
+    <insert id="addOrder" parameterType="com.hdsx.dubbo.order.api.bean.OrderBean">
+        INSERT INTO tb_order (
+          id, productid, orderstate, userid, ordernum, orderprice, createtime, updatetime
+        ) VALUES (
+          #{id}, #{productid}, #{orderstate}, #{userid}, #{ordernum}, #{orderprice}, NOW(), NOW()
+        )
+    </insert>
+
+    <update id="editOrder" parameterType="com.hdsx.dubbo.order.api.bean.OrderBean">
+        UPDATE tb_order
+         productid = #{productid},
+         orderstate = #{orderstate},
+         userid = #{userid},
+         ordernum = #{ordernum},
+         orderprice = #{orderprice},
+         updatetime = NOW()
         WHERE id = #{id}
     </update>
 
-    <update id="updateByIdAndStatus">
-        UPDATE `orders`
-        <set>
-            <if test="updateObj.payAmount != null">
-                , pay_amount = #{updateObj.payAmount}
-            </if>
-            <if test="updateObj.paymentTime != null">
-                , payment_time = #{updateObj.paymentTime}
-            </if>
-            <if test="updateObj.status != null">
-                , status = #{updateObj.status}
-            </if>
-        </set>
+    <update id="cancelOrderById" parameterType="com.hdsx.dubbo.order.api.bean.OrderBean">
+        UPDATE tb_order SET
+         orderstate = 2,
+         updatetime = NOW()
         WHERE id = #{id}
-        AND status = #{status}
     </update>
 
-    <select id="selectById" resultType="com.hdsx.dubbo.order.impl.dataobject.OrderDO">
-        SELECT
-        <include refid="FIELDS" />
-        FROM `orders`
-        WHERE id = #{id}
-    </select>
-
-    <sql id="selectWhere">
-        <if test="status != null">
-            AND `status` = #{status}
-        </if>
-        <if test="userId != null">
-            AND `user_id` = #{userId}
-        </if>
-        <if test="id != null">
-            AND `id` = #{id}
-        </if>
-        <if test="orderNo != null">
-            AND `order_no` = #{orderNo}
-        </if>
-        <if test="hasReturnExchange != null">
-            AND `has_return_exchange` = #{hasReturnExchange}
-        </if>
-        <if test="startCreateTime != null and endCreateTime != null">
-            AND `create_time` &gt;= #{startCreateTime}
-            AND `create_time` &lt;= #{endCreateTime}
-        </if>
-    </sql>
-
-    <select id="selectPageCount" resultType="java.lang.Integer">
-        SELECT
-        COUNT(*)
-        FROM `orders`
-        <where>
-            <include refid="selectWhere" />
-        </where>
-    </select>
-
-    <select id="selectPage" resultType="com.hdsx.dubbo.order.impl.dataobject.OrderDO">
-        SELECT
-        <include refid="FIELDS" />
-        FROM `orders`
-        <where>
-            <include refid="selectWhere" />
-        </where>
-        LIMIT ${pageNo * pageSize}, ${pageSize}
-    </select>
-
+    <update id="editOrderState" parameterType="java.util.List">
+        <foreach collection="list" item="item" index="index" separator=";">
+            UPDATE tb_order SET
+            orderstate = 2,
+            updatetime = NOW()
+            WHERE id = #{item.id}
+        </foreach>
+    </update>
 
 </mapper>

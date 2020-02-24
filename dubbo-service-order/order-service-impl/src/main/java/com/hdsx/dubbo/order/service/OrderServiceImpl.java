@@ -1,29 +1,21 @@
-package com.hdsx.dubbo.order.impl.service;
+package com.hdsx.dubbo.order.service;
 
-import com.hdsx.dubbo.common.framework.constant.DeletedStatusEnum;
-import com.hdsx.dubbo.common.framework.util.DateUtil;
-import com.hdsx.dubbo.common.framework.util.ServiceExceptionUtil;
-import com.hdsx.dubbo.common.framework.vo.CommonResult;
 import com.hdsx.dubbo.common.framework.vo.Result;
 import com.hdsx.dubbo.common.framework.vo.ResultCode;
 import com.hdsx.dubbo.common.framework.vo.ResultUtil;
 import com.hdsx.dubbo.order.api.OrderService;
 import com.hdsx.dubbo.order.api.bean.OrderBean;
 import com.hdsx.dubbo.order.api.bean.OrderQueryBean;
-import com.hdsx.dubbo.order.impl.dao.OrderMapper;
+import com.hdsx.dubbo.order.dao.OrderMapper;
 import com.hdsx.dubbo.product.api.ProductService;
 import com.hdsx.dubbo.product.api.bean.ProductNumBean;
 import io.seata.spring.annotation.GlobalTransactional;
 import org.apache.commons.lang.StringUtils;
 import org.apache.dubbo.config.annotation.Reference;
-import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.Assert;
-import org.springframework.util.CollectionUtils;
+
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * 梁铖城 - 移动开发部

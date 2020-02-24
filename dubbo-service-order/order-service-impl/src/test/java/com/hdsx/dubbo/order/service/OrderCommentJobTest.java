@@ -1,8 +1,8 @@
-package com.hdsx.dubbo.order.impl.service;
+package com.hdsx.dubbo.order.service;
 
 import com.hdsx.dubbo.order.api.bo.OrderCommentTimeOutBO;
 import com.hdsx.dubbo.order.api.dto.OrderCommentTimeOutPageDTO;
-import com.hdsx.dubbo.order.impl.OrderApplicationTest;
+import com.hdsx.dubbo.order.OrderApplicationTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
