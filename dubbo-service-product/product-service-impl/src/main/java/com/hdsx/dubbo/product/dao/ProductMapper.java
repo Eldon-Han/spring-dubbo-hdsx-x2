@@ -4,12 +4,10 @@ import com.hdsx.dubbo.product.api.bean.ProductBean;
 import com.hdsx.dubbo.product.api.bean.ProductNumBean;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
-
 import java.util.Collection;
 import java.util.List;
 
 public interface ProductMapper {
-
     /**
      * 添加商品信息
      */

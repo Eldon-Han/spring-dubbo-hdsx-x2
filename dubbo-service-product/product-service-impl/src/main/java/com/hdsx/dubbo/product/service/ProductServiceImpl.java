@@ -1,22 +1,16 @@
 package com.hdsx.dubbo.product.service;
 
-import com.hdsx.dubbo.common.framework.constant.DeletedStatusEnum;
-import com.hdsx.dubbo.common.framework.util.CollectionUtil;
-import com.hdsx.dubbo.common.framework.util.ServiceExceptionUtil;
-import com.hdsx.dubbo.common.framework.util.StringUtil;
 import com.hdsx.dubbo.common.framework.vo.Result;
 import com.hdsx.dubbo.common.framework.vo.ResultCode;
 import com.hdsx.dubbo.common.framework.vo.ResultUtil;
 import com.hdsx.dubbo.product.api.ProductService;
 import com.hdsx.dubbo.product.api.bean.ProductBean;
 import com.hdsx.dubbo.product.api.bean.ProductNumBean;
-import com.hdsx.dubbo.product.api.constant.ProductCategoryConstants;
-import com.hdsx.dubbo.product.api.constant.ProductErrorCodeEnum;
-import com.hdsx.dubbo.product.api.constant.ProductSpuConstants;
 import com.hdsx.dubbo.product.dao.ProductMapper;
+import org.apache.dubbo.config.annotation.Service;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 import javax.annotation.Resource;
@@ -24,8 +18,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
-// 实际上不用添加。添加的原因是，必须 Spring 报错提示
-@org.apache.dubbo.config.annotation.Service(validation = "true", version = "${dubbo.provider.ProductService.version}")
+@Component
 public class ProductServiceImpl implements ProductService {
 
     @Autowired
@@ -41,7 +34,6 @@ public class ProductServiceImpl implements ProductService {
                 return ResultUtil.error(ResultCode.UPDATE_FAIL);
             }
             // 获取基本信息
-
             // 获取基本信息的ID
             String id = productBean.getId();
             // 判断库里之前有没有,update或者insert

@@ -1,4 +1,4 @@
-package com.hdsx.dubbo.product.application.controller.product;
+package com.hdsx.dubbo.product.controller;
 
 import com.hdsx.dubbo.common.framework.vo.CommonResult;
 import com.hdsx.dubbo.common.framework.vo.Result;
@@ -22,7 +22,7 @@ import static com.hdsx.dubbo.common.framework.vo.CommonResult.success;
 @Api("商品基本信息服务类")
 public class ProductController {
 
-    @Reference(validation = "true", version = "${dubbo.provider.ProductService.version}")
+    @Reference
     private ProductService productService;
 
     @ApiOperation(value = "新增或更新商品信息", httpMethod = "POST", produces = "application/json", notes = "新增或更新商品信息")
