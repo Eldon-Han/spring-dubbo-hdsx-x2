@@ -20,7 +20,7 @@
     </insert>
 
     <update id="editProduct" parameterType="com.hdsx.dubbo.product.api.bean.ProductBean">
-        UPDATE tb_product
+        UPDATE tb_product SET
          title = #{title},
          price = #{price},
          num = #{num},
@@ -30,7 +30,7 @@
     </update>
 
     <update id="updateProductNumBean" parameterType="com.hdsx.dubbo.product.api.bean.ProductNumBean">
-        UPDATE tb_product
+        UPDATE tb_product SET
          num = #{num},
          updated = NOW()
         WHERE id = #{id}

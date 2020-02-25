@@ -15,7 +15,7 @@
     </properties>
 
     <dependencies>
-        <!-- Mall 相关 -->
+        <!--   相关 -->
         <dependency>
             <groupId>com.hdsx.dubbo</groupId>
             <artifactId>common-framework</artifactId>
